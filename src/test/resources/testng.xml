@@ -6,7 +6,8 @@
             <class name="org.coding.arraysChallenge.FindDuplicatesTest"/>
             <class name="org.coding.arraysChallenge.PairsOfSumTest"/>
             <class name="org.coding.arraysChallenge.RemoveAllRepitedNumbersInclOriginTest"/>
-            <class name="org.coding.arraysChallenge.RemoveDuplicatesTest"/>            
+            <class name="org.coding.arraysChallenge.RemoveDuplicatesTest"/>   
+            <class name="org.coding.arraysChallenge.ReversNumbersTest"/>                       
         </classes>
     </test>
 </suite>
