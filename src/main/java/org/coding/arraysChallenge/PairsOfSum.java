@@ -37,7 +37,6 @@ public class PairsOfSum {
 		int[] arr03 = {-3, -2, -2, 5, 6, 7, 1, 1, 2, 7, 8, 0, 8, 8, 5, 4, 10};
 		int[] arr04 = {-3, 8, 5, 4, 10};
 
-
 		int sum = 8;
 		
 		System.out.println("With duplicates:");
@@ -47,10 +46,11 @@ public class PairsOfSum {
 		ps.sumPairs(arr04, sum);
 		
 		System.out.println("\n\nWithout duplicates:");
-		ps.sumPairsNoDup(arr01, sum);
-		ps.sumPairsNoDup(arr02, sum);
-		ps.sumPairsNoDup(arr03, sum);
-		ps.sumPairsNoDup(arr04, sum);
+		
+		System.out.print((ps.sumPairsNoDup(arr01, sum).size() != 0) ? "\n" + ps.sumPairsNoDup(arr01, sum) : "\nPairs not found.");
+		System.out.print((ps.sumPairsNoDup(arr02, sum).size() != 0) ? "\n" + ps.sumPairsNoDup(arr02, sum) : "\nPairs not found.");
+		System.out.print((ps.sumPairsNoDup(arr03, sum).size() != 0) ? "\n" + ps.sumPairsNoDup(arr03, sum) : "\nPairs not found.");
+		System.out.print((ps.sumPairsNoDup(arr04, sum).size() != 0) ? "\n" + ps.sumPairsNoDup(arr04, sum) : "\nPairs not found.");
 		
 	}
 	
@@ -75,8 +75,8 @@ public class PairsOfSum {
 	}
 	
 	// without duplicates and equals like 4, 4
-	public void sumPairsNoDup(int[] arr,  int sum) {
-		TreeSet<String> ts = new TreeSet<String>();
+	public TreeSet sumPairsNoDup(int[] arr,  int sum) {
+		TreeSet<String> ts = new TreeSet<>();
 		int first;
 		int second;
 		String pair;
@@ -90,11 +90,12 @@ public class PairsOfSum {
 					}
 			}
 		}
-		System.out.print((ts.size() != 0) ? "\n" + ts.toString() : "\nPairs not found.");
+		return ts;
 	}
 	
 	public String pairString(int first, int second) {
 		return ((first < second) ? String.valueOf(first) + ":" + String.valueOf(second) : String.valueOf(second) + ":" + String.valueOf(first));
 	}
 
+	
 }
