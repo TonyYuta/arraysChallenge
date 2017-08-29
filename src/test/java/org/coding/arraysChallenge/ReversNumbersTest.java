@@ -59,7 +59,7 @@ public class ReversNumbersTest {
 		Assert.assertEquals(rn.reverseNumberUsingStringBuffer(origin), expected, "expecterd reverse number doesn't match to actual");
 	}
 	
-	@Test(enabled = true, timeOut = 1000, dataProvider = "numbers", groups = {"reverse", "numbers", "sanity", "regression", "all"}, priority = 5)
+	@Test(enabled = true, timeOut = 1000, dataProvider = "numbers", groups = {"reverse", "numbers", "sanity", "regression", "bat"}, priority = 5)
 	public void testReverseNumberUsingStringBufferDataProvider(int origin, int expected) {
 		Assert.assertEquals(rn.reverseNumberUsingStringBuffer(origin), expected);
 	}
