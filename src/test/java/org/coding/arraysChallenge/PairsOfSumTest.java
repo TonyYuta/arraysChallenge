@@ -34,7 +34,7 @@ public class PairsOfSumTest {
 		pos = new PairsOfSum();
 	}
 	
-	@Test(enabled = true, groups = {"duplicates", "pairs", "all"}, priority = 0)
+	@Test(enabled = true, groups = {"duplicates", "pairs", "sanity", "regression"}, priority = 0)
 	public void testSumPairs() {
 		int[] arr01 = {2, 2, 3, 1, 6, 2, 4, 5, 0, 5, -10};
 		int expected = 2;

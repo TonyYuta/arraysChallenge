@@ -1,5 +1,5 @@
 /**
- *   File Name: ReversNumbers.java<br>
+ *   File Name: ReverseNumbers.java<br>
  *
  *   Yutaka<br>
  *   Created: Aug 27, 2017
@@ -9,7 +9,7 @@
 package org.coding.arraysChallenge;
 
 /**
- * ReversNumbers //ADDD (description of class)
+ * ReverseNumbers //ADDD (description of class)
  * <p>
  * //ADDD (description of core fields)
  * <p>
@@ -20,7 +20,8 @@ package org.coding.arraysChallenge;
  * @since       1.0
  *
  */
-public class ReversNumbers {
+public class ReverseNumbers {
+	
 	
 	public int reverseNumberUsingStringBuffer(int num) {
 		StringBuffer sb = new StringBuffer(String.valueOf(num));

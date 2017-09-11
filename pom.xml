@@ -16,12 +16,13 @@
 
 <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.11</version>
-        </dependency>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		    <version>6.11</version>
+		    <scope>test</scope>
+		</dependency>
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -88,6 +89,7 @@
                 </properties>
             </configuration>
         </plugin>
+        
         <!-- Compiler configuration -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -99,6 +101,7 @@
                 <encoding>UTF-8</encoding>
             </configuration>
         </plugin>
+        
         <!-- code coverage configuration -->
         <plugin>
             <groupId>org.jacoco</groupId>
@@ -142,7 +145,7 @@
                         <testFailureIgnore>true</testFailureIgnore>
                         <!-- comment next line for fun TCs from IDE; uncomment it for Code Coverage in Jenkins -->
 						<!-- <argLine>${surefireArgLine}</argLine> -->
-						<argLine>${surefireArgLine}</argLine> 
+						<!-- <argLine>${surefireArgLine}</argLine> --> 
 						  
                  	</configuration>
                 </execution>

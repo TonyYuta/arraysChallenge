@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Code Coverage">
-    <test name="CollectionMapTest" preserve-order="true">
+    <test name="ArraysChallengeTest" preserve-order="true">
         <classes>
-            <class name="org.coding.arraysChallenge.FindDuplicatesTest"/>
+<!--             <class name="org.coding.arraysChallenge.FindDuplicatesTest"/>
             <class name="org.coding.arraysChallenge.PairsOfSumTest"/>
             <class name="org.coding.arraysChallenge.RemoveAllRepitedNumbersInclOriginTest"/>
-            <class name="org.coding.arraysChallenge.RemoveDuplicatesTest"/>   
-            <class name="org.coding.arraysChallenge.ReversNumbersTest"/>                       
+            <class name="org.coding.arraysChallenge.RemoveDuplicatesTest"/>  -->  
+            <class name="org.coding.arraysChallenge.ReverseNumbersDPTest"/>   
+                                 
         </classes>
     </test>
 </suite>

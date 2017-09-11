@@ -32,7 +32,7 @@ public class RemoveAllRepitedNumbersInclOriginTest {
 		rarnio = new RemoveAllRepitedNumbersInclOrigin();
 	}
 	
-	@Test(enabled = true, groups = {"remove", "numbers", "all"}, priority = 2)
+	@Test(enabled = true, groups = {"remove", "numbers", "sanity", "bat", "regression"}, priority = 2)
 	public void testRemoveDuplicates() {
 		int[] arr01 = {1, 2, 2, 3, 4, 4, 2, 5, 2};
 		int expected = 3;

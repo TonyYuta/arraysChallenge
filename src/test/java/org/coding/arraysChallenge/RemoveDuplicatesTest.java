@@ -32,7 +32,7 @@ public class RemoveDuplicatesTest {
 		rd = new RemoveDuplicates();
 	}
 	
-	@Test(enabled = true, groups = {"duplicates", "all"}, priority = 4)
+	@Test(enabled = true, groups = {"duplicates", "bat"}, priority = 4)
 	public void testRemoveDuplicates() {
 		int[] arr01 = {1, 2, 1, 2, 9, -1, 3, 2};
 		int expected = 3;

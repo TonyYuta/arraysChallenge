@@ -1,5 +1,5 @@
 /**
- *   File Name: ReversNumbersTest.java<br>
+ *   File Name: ReverseNumbersTest.java<br>
  *
  *   Yutaka<br>
  *   Created: Aug 27, 2017
@@ -14,7 +14,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
- * ReversNumbersTest //ADDD (description of class)
+ * ReverseNumbersTest //ADDD (description of class)
  * <p>
  * //ADDD (description of core fields)
  * <p>
@@ -25,13 +25,13 @@ import org.testng.annotations.Test;
  * @since       1.0
  *
  */
-public class ReversNumbersTest {
+public class ReverseNumbersTest {
 	
-	ReversNumbers rn;
+	ReverseNumbers rn;
 	
 	@BeforeClass(alwaysRun = true)
 	public void setUpReversNumbersTest() {
-		rn = new ReversNumbers();
+		rn = new ReverseNumbers();
 	}
 	
 	@DataProvider(name = "numbers")
