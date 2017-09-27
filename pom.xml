@@ -141,7 +141,9 @@
                     <configuration>
                         <testFailureIgnore>true</testFailureIgnore>
                         <!-- comment next line for fun TCs from IDE; uncomment it for Code Coverage in Jenkins -->
-						<!-- <argLine>${surefireArgLine}</argLine> --> 				  
+						<argLine>${surefireArgLine}</argLine>			  
+		 	  		    <!-- <argLine>${surefireArgLine}</argLine> --> 				  
+						
                  	</configuration>
                 </execution>
             </executions>
