@@ -23,11 +23,10 @@ package org.coding.arraysChallenge;
 public class ReverseNumbers {
 	
 	
-	public int reverseNumberUsingStringBuffer(int num) {
+	public long reverseNumberUsingStringBuffer(long num) {
 		StringBuffer sb = new StringBuffer(String.valueOf(num));
 		sb.reverse();
-		int reverse = Integer.parseInt(sb.toString());
-		return reverse;
+		return Long.parseLong(sb.toString());
 	}
 
 }

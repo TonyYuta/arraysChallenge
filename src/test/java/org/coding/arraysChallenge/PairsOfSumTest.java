@@ -8,6 +8,8 @@
 
 package org.coding.arraysChallenge;
 
+import java.util.Arrays;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -37,9 +39,10 @@ public class PairsOfSumTest {
 	@Test(enabled = true, groups = {"duplicates", "pairs", "sanity", "regression"}, priority = 0)
 	public void testSumPairs() {
 		int[] arr01 = {2, 2, 3, 1, 6, 2, 4, 5, 0, 5, -10};
-		int expected = 2;
+		String[] expected = {"0:4", "1:3"};
 		int sum = 4;
-		Assert.assertEquals(pos.sumPairsNoDup(arr01, sum).size(), expected, "Qty pairs doesn't match to expected");
+		System.out.println(Arrays.toString(pos.sumPairsNoDup(arr01, sum)));
+		Assert.assertEquals(pos.sumPairsNoDup(arr01, sum), expected, "Qty pairs doesn't match to expected");
 	}
 	
 }

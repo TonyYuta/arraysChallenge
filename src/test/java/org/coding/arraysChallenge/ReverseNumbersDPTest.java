@@ -7,11 +7,6 @@
  */
 
 package org.coding.arraysChallenge;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -19,6 +14,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import org.testng.Assert;
 import org.testng.ITest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -85,7 +81,8 @@ public class ReverseNumbersDPTest implements ITest {	// String csvFile = "a.csv"
 	@Test(dataProvider = "dp")
 	public void test(String a, String b, String c, String d) {
 		//System.out.println(a + "," + b + ", " + c + ", " + d);
-		assertThat(Integer.parseInt(b) + Integer.parseInt(c), is(Integer.parseInt(d)));
+//		assertThat(Integer.parseInt(b) + Integer.parseInt(c), is(Integer.parseInt(d)));
+		Assert.assertEquals((Integer.parseInt(b) + Integer.parseInt(c)), (Integer.parseInt(d)));
 	}
 
 }

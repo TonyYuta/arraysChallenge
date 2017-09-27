@@ -8,12 +8,11 @@
 
 package org.coding.arraysChallenge;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import edu.emory.mathcs.backport.java.util.Arrays;
 
 
 /**
@@ -40,9 +39,17 @@ public class FindDuplicatesTest {
 	@Test(enabled = true, groups = {"duplicates", "sanity", "regression"}, priority = 0) 
 		public void testFindDuplicates() {
 			int[] arr01 = {0,2,3,0,-2,5,6,2};
-			int expected = 2;
-			AssertJUnit.assertEquals(fd.duplicatesInt(arr01).size(), expected);			
+			int[] expected = {0, 2};
+			System.out.println(Arrays.toString(fd.duplicatesInt(arr01).toArray()));
+			Assert.assertEquals(fd.duplicatesInt(arr01).toArray(), expected);			
 		}
 	
+	@Test(enabled = true, groups = {"duplicates", "sanity", "regression"}, priority = 0)
+	public void testFindDuplicatesArray() {
+		int[] arr01 = {0,2,3,0,-2,5,6,2};
+		int[] expected = {0, 2};
+		System.out.println(Arrays.toString(fd.duplicatesIntArray(arr01)));
+		Assert.assertEquals(fd.duplicatesIntArray(arr01), expected);
+	}
 	
 }

@@ -27,6 +27,7 @@ public class RemoveDuplicates {
 	public static void main(String[] args) {
 		RemoveDuplicates rd = new RemoveDuplicates();
 		
+		
 		int[] arr01 = {1, 2, 1, 2, 9, -1, 3, 2};
 		
 		System.out.println("arr01 origin: ");
@@ -38,9 +39,12 @@ public class RemoveDuplicates {
 	}
 	
 	public int[] removeDuplicates(int[] arr) {
+		
 		al = new ArrayList<>(); 
 		for(int i = 0; i < arr.length-1; i++) {
-			for(int j = i; j < arr.length; j++) {
+			System.out.print(" <" + arr[i] + "> ");
+			for(int j = i+1; j < arr.length; j++) {
+				System.out.print(" <<" + arr[j] + ">> ");
 				if(arr[j] == arr[i]) {
 					al.add(j);
 				}
@@ -48,11 +52,13 @@ public class RemoveDuplicates {
 		}
 		
 	for(int i = 0; i < al.size(); i++) {
-		arr = ArrayUtils.removeElement(arr, al.get(i));
-		}
-		
+			arr = ArrayUtils.removeElement(arr, al.get(i));
+		}	
 		return arr;
 	}
+	
+
+			
 	
 	
 }

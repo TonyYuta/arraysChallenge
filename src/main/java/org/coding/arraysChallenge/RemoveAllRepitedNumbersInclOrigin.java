@@ -16,11 +16,6 @@ import org.apache.commons.lang3.ArrayUtils;
 
 
 /**
- * RemoveAllRepitedNumbersInclOrigin //ADDD (description of class)
- * <p>
- * //ADDD (description of core fields)
- * <p>
- * //ADDD (description of core methods)
  * 
  * @author      Yutaka
  * @version     1.0.0

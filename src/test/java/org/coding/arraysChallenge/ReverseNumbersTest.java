@@ -54,8 +54,9 @@ public class ReverseNumbersTest {
 	
 	@Test(enabled = true, groups = {"reverse", "numbers", "sanity", "regression", "all"}, priority = 5)
 	public void testReverseNumberUsingStringBuffer() {
-		int origin = 1230506;
-		int expected = 6050321;
+		long origin = 1_345_678_901_234_567_891L;
+		long expected = 1_987_654_321_098_765_431L;
+		System.out.println(rn.reverseNumberUsingStringBuffer(origin));
 		Assert.assertEquals(rn.reverseNumberUsingStringBuffer(origin), expected, "expecterd reverse number doesn't match to actual");
 	}
 	

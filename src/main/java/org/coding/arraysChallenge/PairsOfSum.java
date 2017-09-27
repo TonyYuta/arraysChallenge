@@ -10,6 +10,8 @@ package org.coding.arraysChallenge;
 
 import java.util.TreeSet;
 
+import edu.emory.mathcs.backport.java.util.Arrays;
+
 /**
  * 5. How to find all pairs on integer array whose sum is equal to given number? (solution)
  * This is an intermediate level of array coding question, it's neither too easy nor too difficult. 
@@ -32,9 +34,9 @@ public class PairsOfSum {
 		
 		PairsOfSum ps = new PairsOfSum();
 		
-		int[] arr01 = {2, 7, 5, 1, 6, 4};
-		int[] arr02 = {-2, 10, 9, 73, -2, 5, -432, 0, 1, 3, 16, 71, 0};
-		int[] arr03 = {-3, -2, -2, 5, 6, 7, 1, 1, 2, 7, 8, 0, 8, 8, 5, 4, 10};
+		int[] arr01 = {2, 7, 5, 1, 4, 1};
+		int[] arr02 = {-2, 10, 9, 73, -2, 5, -432, 0, 1, 3, 16, 71, -2};
+		int[] arr03 = {-3, -2, -2, 5, 6, 7, 1, 1, 2, 7, 8, 0, 8, 8, 5, 4, 6};
 		int[] arr04 = {-3, 8, 5, 4, 10};
 
 		int sum = 8;
@@ -47,10 +49,10 @@ public class PairsOfSum {
 		
 		System.out.println("\n\nWithout duplicates:");
 		
-		System.out.print((ps.sumPairsNoDup(arr01, sum).size() != 0) ? "\n" + ps.sumPairsNoDup(arr01, sum) : "\nPairs not found.");
-		System.out.print((ps.sumPairsNoDup(arr02, sum).size() != 0) ? "\n" + ps.sumPairsNoDup(arr02, sum) : "\nPairs not found.");
-		System.out.print((ps.sumPairsNoDup(arr03, sum).size() != 0) ? "\n" + ps.sumPairsNoDup(arr03, sum) : "\nPairs not found.");
-		System.out.print((ps.sumPairsNoDup(arr04, sum).size() != 0) ? "\n" + ps.sumPairsNoDup(arr04, sum) : "\nPairs not found.");
+		System.out.print((ps.sumPairsNoDup(arr01, sum).length != 0) ? "\n" + Arrays.toString(ps.sumPairsNoDup(arr01, sum)) : "\nPairs not found.");
+		System.out.print((ps.sumPairsNoDup(arr02, sum).length != 0) ? "\n" + Arrays.toString(ps.sumPairsNoDup(arr02, sum)) : "\nPairs not found.");
+		System.out.print((ps.sumPairsNoDup(arr03, sum).length != 0) ? "\n" + Arrays.toString(ps.sumPairsNoDup(arr03, sum)) : "\nPairs not found.");
+		System.out.print((ps.sumPairsNoDup(arr04, sum).length != 0) ? "\n" + Arrays.toString(ps.sumPairsNoDup(arr04, sum)) : "\nPairs not found.");
 		
 	}
 	
@@ -60,7 +62,7 @@ public class PairsOfSum {
 		boolean isPairs = false;
 		System.out.print("Pairs are \n");
 		
-		for(int i = 0; i < arr.length; i++) {
+		for(int i = 0; i < arr.length-1; i++) {
 			first = arr[i];
 			for(int j = i+1; j < arr.length; j++) {
 				second = arr[j];
@@ -75,13 +77,13 @@ public class PairsOfSum {
 	}
 	
 	// without duplicates and equals like 4, 4
-	public TreeSet sumPairsNoDup(int[] arr,  int sum) {
+	public Object[] sumPairsNoDup(int[] arr,  int sum) {
 		TreeSet<String> ts = new TreeSet<>();
 		int first;
 		int second;
 		String pair;
 		
-		for(int i = 0; i < arr.length; i++) {
+		for(int i = 0; i < arr.length-1; i++) {
 			first = arr[i];
 			for(int j = i+1; j < arr.length; j++) {
 				second = arr[j];
@@ -90,7 +92,7 @@ public class PairsOfSum {
 					}
 			}
 		}
-		return ts;
+		return ts.toArray();
 	}
 	
 	public String pairString(int first, int second) {
